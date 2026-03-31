@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <title>花蓮旅遊介紹</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .card {
+      background: white;
+      margin: 15px 0;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+    }
+
+    /* 回到頂部按鈕樣式 */
+    #topBtn {
+      display: none;
+      position: fixed;
+      bottom: 60px;
+      right: 60px;
+      z-index: 100;
+      font-size: 36px;
+      border: none;
+      outline: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      padding: 12px 18px;
+      border-radius: 50px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s;
+    }
+
+    #topBtn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>花蓮旅遊介紹</h1>
+    <p>探索台灣最美的自然與美食天堂</p>
+  </header>
+
+  <section>
+    <h2>關於花蓮</h2>
+    <div class="card">
+      <p>
+        花蓮位於台灣東部，以壯麗的自然景觀與純淨的環境聞名。
+        這裡擁有壯觀的峽谷、蔚藍的海岸線，以及豐富的在地美食，
+        是許多人放鬆與旅遊的首選地點。
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>熱門景點</h2>
+
+    <div class="card">
+      <h3>太魯閣國家公園</h3>
+      <p>以壯觀的大理石峽谷聞名，是花蓮最具代表性的景點之一。</p>
+      <img src="https://www.easttaiwan.net/_api/content/images/attractions/785/1920x1080_attractions-image-s10wijqz_k68wxnjlxig5g.jpg">
+    </div>
+
+    <div class="card">
+      <h3>七星潭</h3>
+      <p>擁有清澈海水與美麗海岸線，是觀海與放鬆的好地方。</p>
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/2a/e0/cd/caption.jpg?w=900&h=500&s=1">
+    </div>
+
+    <div class="card">
+      <h3>東大門夜市</h3>
+      <p>集合多種花蓮小吃，是體驗在地文化的最佳地點。</p>
+      <img src="https://tour-hualien-ws.hl.gov.tw/001/Upload/435/relpic/12302/1448/20897fc8-17f0-4e90-a442-6a1e7ebae933.jpg">
+    </div>
+
+  </section>
+
+  <section>
+    <h2>花蓮美食</h2>
+
+    <div class="card">
+      <h3>炸彈蔥油餅</h3>
+      <p>外酥內軟，加上半熟蛋，是來花蓮必吃的小吃。</p>
+      <img src="https://hualien.cc/wp-content/uploads/20220331223813_39.jpg">
+    </div>
+
+    <div class="card">
+      <h3>麻糬</h3>
+      <p>花蓮的麻糬口感Q彈，是非常受歡迎的伴手禮。</p>
+      <img src="https://qqblog.tw/wp-content/uploads/2026/03/%E6%9B%BE1001.jpg">
+    </div>
+
+    <div class="card">
+      <h3>扁食</h3>
+      <p>類似餛飩的料理，湯頭清甜，是在地經典美食。</p>
+      <img src="https://images.deliveryhero.io/image/fd-tw/LH/swzw-listing.jpg">
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2026 花蓮旅遊介紹</p>
+  </footer>
+
+  <!-- 回到頂部按鈕 -->
+  <button id="topBtn" title="回到頂部">⬆</button>
+
+  <script>
+    // 取得按鈕
+    let topBtn = document.getElementById("topBtn");
+    // 滾動時顯示或隱藏按鈕
+    window.onscroll = function() {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    }
+    // 點擊按鈕回到頂部
+    topBtn.addEventListener("click", function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+
+</body>
+
+</html>
